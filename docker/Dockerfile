@@ -12,7 +12,7 @@
 RUN pacman-db-upgrade 
 RUN timeout -s 9 10 cat /dev/urandom > /dev/zero || true
 RUN pacman-key --init
-`RUN pacman-key --populate archlinux
+RUN pacman-key --populate archlinux
 RUN pacman -Syy --noconfirm archlinux-keyring
 RUN pacman-db-upgrade 
 RUN pacman -Suy --noconfirm
@@ -42,6 +42,7 @@ EXPOSE 80
 # Export log files :
 # Export database :
 # Sources : 
+VOLUME /srv/http/www
 
 # Disable debug mode :
 # RUN sed -i 's/DEBUG = True/DEBUG = False/' htdocs/hypnose/settings.py
