@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/zsh
 
 NAME=$1
 

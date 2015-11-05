@@ -1,7 +1,7 @@
 # Hypnose container
 
 # For x64 systems.
-#FROM base/archlinux
+FROM base/archlinux
 # For x32 systems.
 #FROM archlinux
 # For rapsberry pi.
@@ -22,7 +22,7 @@ RUN pacman -Suy --noconfirm base base-devel python3 python-pip apache sqlite3 \
 
 
 # Copying requirements.txt
-COPY ./requirements.txt /requirements.txt
+COPY ../requirements.txt /requirements.txt
 
 # Installing dependencies
 RUN pip install -r /requirements.txt
