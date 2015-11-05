@@ -20,7 +20,7 @@ DBOUT=$DBOUTDIR"/db.sqlite3"
 
 # SRC :
 SRCIN=$BASEIN"htdocs"
-SRCOUT="./htdocs"
+SRCOUT="./src"
 
 # Conf :
 # CONFIN=$BASEIN"/conf/httpd-app.conf"
@@ -53,7 +53,7 @@ DEFAULT=$DAEMON
 #DEFAULT=$SHELL
 
 # Building docker image.
-docker build -t $NAME .
+#docker build -t $NAME .
 
 # creating files if it doesn't exist.
 mkdir -p $DBOUTDIR

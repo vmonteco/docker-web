@@ -40,9 +40,11 @@ EXPOSE 80
 
 # VOLUMES :
 # Export log files :
+VOLUME /srv/http/www/logs
 # Export database :
+VOLUME /srv/http/www/data
 # Sources : 
-VOLUME /srv/http/www
+VOLUME /srv/http/www/htdocs
 
 # Disable debug mode :
 # RUN sed -i 's/DEBUG = True/DEBUG = False/' htdocs/hypnose/settings.py
