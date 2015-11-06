@@ -19,8 +19,8 @@ DBOUTDIR="./data"
 DBOUT=$DBOUTDIR"/db.sqlite3"
 
 # SRC :
-SRCIN=$BASEIN"htdocs"
-SRCOUT="./src"
+SRCIN=$BASEIN"/htdocs"
+SRCOUT=$BASEOUT"/src/app"
 
 # Conf :
 # CONFIN=$BASEIN"/server/httpd-app.conf"
@@ -40,7 +40,8 @@ CONFVOL="-v $CONFOUT:$CONFIN"
 LOGSVOL="-v $LOGSOUT:$LOGSIN"
 #VOLUMES=$DBVOL $SRCVOL $CONFVOL
 BASEVOL="-v $BASEOUT:$BASEIN"
-VOLUMES="$CONFVOL $BASEVOL $LOGSVOL"
+SRCVOL="-v $SRCOUT:$SRCIN"
+VOLUMES="$CONFVOL $SRCVOL $LOGSVOL"
 # Other options :
 OTHER=" --net=host "
 OTHER=""

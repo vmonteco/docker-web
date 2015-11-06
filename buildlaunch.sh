@@ -1,4 +1,6 @@
 #!/bin/zsh
 
-./build.sh
-./launch.sh
+NAME=$1
+
+./build.sh $NAME
+./launch.sh $NAME
