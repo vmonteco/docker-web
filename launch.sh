@@ -14,7 +14,7 @@ PORTS="-p 10080:80"
 
 # Database :
 DBINDIR=$BASEIN"/data"
-DBIN=$DBINDIR"/httpdb.sqlite3"
+DBIN=$DBINDIR"/db.sqlite3"
 DBOUTDIR="./data"
 DBOUT=$DBOUTDIR"/db.sqlite3"
 
@@ -23,10 +23,10 @@ SRCIN=$BASEIN"htdocs"
 SRCOUT="./src"
 
 # Conf :
-# CONFIN=$BASEIN"/conf/httpd-app.conf"
-# CONFOUT="$BASEOUT/conf/httpd-app.conf"
-CONFIN="/etc/httpd/conf/httpd.conf"
-CONFOUT=$BASEOUT"/conf/httpd.conf"
+# CONFIN=$BASEIN"/server/httpd-app.conf"
+# CONFOUT="$BASEOUT/server/httpd-app.conf"
+CONFIN="/etc/httpd/server/httpd.conf"
+CONFOUT=$BASEOUT"/server/httpd.conf"
 
 
 # Logs :
